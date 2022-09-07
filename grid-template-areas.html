@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <title>CSS - Grid template areas</title>
+    <style>
+      .gridContainer {
+        display: grid;
+      }
+      .exemplo1 {
+        grid-template-areas:
+          "vermelho verde"
+          "amarelo azul";
+      }
+      .exemplo2 {
+        grid-template-areas:
+          "azul azul verde"
+          "amarelo vermelho vermelho";
+      }
+      .exemplo3 {
+        grid-template-areas:
+          "azul verde verde verde"
+          "azul amarelo vermelho vermelho";
+      }
+
+      .itemRed {
+        grid-area: vermelho;
+      }
+      .itemBlue {
+        grid-area: azul;
+      }
+      .itemGreen {
+        grid-area: verde;
+      }
+      .itemYellow {
+        grid-area: amarelo;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid template areas</h1>
+    <h2>Exemplo 1: template areas</h2>
+    <div class="gridContainer exemplo1">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+    <h1>Grid template areas</h1>
+    <h2>Exemplo 2: tamanhos irregulares</h2>
+    <div class="gridContainer exemplo2">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 3: tamanhos irregulares</h2>
+    <div class="gridContainer exemplo3">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+  </body>
+</html>

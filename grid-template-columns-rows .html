@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <title>CSS - Grid columns rows</title>
+    <style>
+      .gridContainer {
+        display: grid;
+      }
+      .exemplo1 {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 50px 100px;
+      }
+      .exemplo2 {
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 100px 150px;
+      }
+      .itemRed {
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .itemBlue {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .itemGreen {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .itemYellow {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid template columns x rows</h1>
+
+    <h2>Exemplo 1: tamanho em PX FIXO e frações de espaço</h2>
+    <div class="gridContainer exemplo1">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+      <div class="yellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 2: posições diferentes</h2>
+    <div class="gridContainer exemplo2">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <title>CSS - Grid template</title>
+    <style>
+      .gridContainer {
+        display: grid;
+      }
+      /* Neste exemplo identificamos a altura das linhas e depois da barra identificamos a largura das colunas, tem que identificar a altura das linhas ao lado da linha correspondente e a largura das colunas na linha debaixo das linhas logo após a barra para direita. */
+      .exemplo1 {
+        gap: 10px;
+        grid-template:
+          "vermelho verde" 50px /*altura das linhas*/
+          "amarelo azul" 100px
+          /2fr 1fr; /*largura das colunas indicado depois da barra*/
+      }
+      .exemplo2 {
+        column-gap: 10px;
+        row-gap: 40px;
+        grid-template-areas:
+          "azul azul verde"
+          "amarelo vermelho vermelho";
+      }
+      .exemplo3 {
+        grid-template-areas:
+          "azul amarelo vermelho vermelho"
+          "azul verde verde verde";
+      }
+      .exemplo4 {
+        grid-template:
+          "azul verde verde verde" 80px
+          "azul amarelo vermelho vermelho" 60px
+          /1fr 3fr 2fr 1fr;
+      }
+
+      .itemRed {
+        grid-area: vermelho;
+      }
+      .itemBlue {
+        grid-area: azul;
+      }
+
+      .itemGreen {
+        grid-area: verde;
+      }
+      .itemYellow {
+        grid-area: amarelo;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Gap</h1>
+    <h2>Exemplo 1: GAP em PX colunas e linhas</h2>
+    <div class="gridContainer exemplo1">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 2: GAP em 10PX colunas e 40px linhas</h2>
+    <div class="gridContainer exemplo2">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 3: tamanhos irregulares</h2>
+    <div class="gridContainer exemplo3">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 4: tamanhos irregulares</h2>
+    <div class="gridContainer exemplo4">
+      <div class="red itemRed">1</div>
+      <div class="blue itemBlue">2</div>
+      <div class="green itemGreen">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+  </body>
+</html>

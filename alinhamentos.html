@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <title>CSS - Grid alinhamentos</title>
+    <style>
+      .gridContainer {
+        display: grid;
+        height: 200px;
+        background-color: #444;
+      }
+      .exemplo1 {
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px 50px;
+      }
+
+      .exemplo2 {
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px 50px;
+        justify-content: center;
+        align-content: center;
+      }
+      .exemplo3 {
+        justify-items: center;
+        align-items: center;
+      }
+      .exemplo4 {
+        justify-items: stretch;
+        align-items: stretch;
+      }
+      .exemplo5 {
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px 50px;
+      }
+      .itemYellow {
+        justify-self: end;
+        align-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alinhamentos</h1>
+    <h2>Exemplo 1: Alinhamento de conteúdo do grid start</h2>
+    <div class="gridContainer exemplo1">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+      <div class="yellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 2: Justify-content e align-content : center</h2>
+    <div class="gridContainer exemplo2">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+      <div class="yellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 3: alinhamento de conteúdo da div</h2>
+    <div class="gridContainer exemplo3">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+      <div class="yellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 4: alinhamento individual de conteúdo do item em si mesmo</h2>
+    <div class="gridContainer exemplo4">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+      <div class="yellow">4</div>
+    </div>
+    <hr />
+    <h2>Exemplo 5: alinhamento individual do item</h2>
+    <div class="gridContainer exemplo5">
+      <div class="red">1</div>
+      <div class="blue">2</div>
+      <div class="green">3</div>
+      <div class="yellow itemYellow">4</div>
+    </div>
+    <hr />
+  </body>
+</html>
